@@ -1,0 +1,64 @@
+import React from 'react';
+import { Users, Award, Clock, MapPin } from 'lucide-react';
+
+const About = () => {
+  const stats = [
+    { icon: <Users className="w-8 h-8" />, number: "5000+", label: "Students Taught" },
+    { icon: <Award className="w-8 h-8" />, number: "98%", label: "Pass Rate" },
+    { icon: <Clock className="w-8 h-8" />, number: "15+", label: "Years Experience" },
+    { icon: <MapPin className="w-8 h-8" />, number: "50+", label: "Test Routes Covered" }
+  ];
+
+  return (
+    <section id="about" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Why Choose Drive365?
+            </h2>
+            <p className="text-lg text-gray-600 mb-6">
+              With over 15 years of experience in driver education, Drive365 has established itself as the premier driving school in the region. Our team of certified instructors is dedicated to providing safe, effective, and enjoyable driving lessons.
+            </p>
+            <p className="text-lg text-gray-600 mb-8">
+              We believe that learning to drive should be a positive experience. That's why we use modern teaching methods, maintain a fleet of well-equipped vehicles, and offer flexible scheduling to fit your lifestyle.
+            </p>
+            
+            <div className="grid grid-cols-2 gap-6">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-blue-600 flex justify-center mb-2">
+                    {stat.icon}
+                  </div>
+                  <div className="text-3xl font-bold text-gray-900 mb-1">
+                    {stat.number}
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="relative">
+            <img
+              src="https://images.pexels.com/photos/3807277/pexels-photo-3807277.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Professional driving instructor"
+              className="rounded-lg shadow-xl"
+            />
+            <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-lg shadow-lg">
+              <div className="text-center">
+                <div className="text-2xl font-bold">ADI</div>
+                <div className="text-sm">Certified</div>
+                <div className="text-sm">Instructors</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;

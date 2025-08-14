@@ -1,26 +1,26 @@
-@@ .. @@
- import React from 'react';
- import Header from './components/Header';
- import Hero from './components/Hero';
- import Services from './components/Services';
-+import FullWidthPhoto from './components/FullWidthPhoto';
- import About from './components/About';
- import Testimonials from './components/Testimonials';
- import Contact from './components/Contact';
- import Footer from './components/Footer';
+import React from 'react';
+import Header from './Header';
+import Hero from './Hero';
+import Services from './Services';
+import FullWidthPhoto from './FullWidthPhoto';
+import About from './About';
+import Testimonials from './Testimonials';
+import Contact from './Contact';
+import Footer from './Footer';
 
+function App() {
+  return (
+    <div className="min-h-screen">
+      <Header />
+      <Hero />
+      <Services />
+      <FullWidthPhoto />
+      <About />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </div>
+  );
+}
 
- function App() {
-   return (
-     <div className="min-h-screen">
-       <Header />
-       <Hero />
-       <Services />
-+      <FullWidthPhoto />
-       <About />
-       <Testimonials />
-       <Contact />
-       <Footer />
-     </div>
-   );
- }
+export default App;
